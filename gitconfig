@@ -1,0 +1,27 @@
+[alias]
+	b    = branch
+	ci   = commit
+	co   = checkout
+	conf = config
+	d    = diff
+	f    = fetch
+	l    = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	m    = merge
+	p    = pull
+	pick = cherry-pick
+	r    = remote
+	st   = status
+	sub  = submodule
+[color]
+	ui = auto
+[diff]
+	algorithm = patience
+	mnemonicprefix = true
+	renames = copies
+[merge]
+	conflictstyle = diff3
+[push]
+	default = upstream
+[rerere]
+	autoupdate = true
+	enabled = true
