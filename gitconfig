@@ -13,6 +13,8 @@
 	r    = remote
 	st   = status
 	sub  = submodule
+[branch]
+	autosetuprebase = always
 [color]
 	ui = auto
 [diff]
