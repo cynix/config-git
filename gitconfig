@@ -4,15 +4,16 @@
 	co   = checkout
 	conf = config
 	d    = diff
-	f    = fetch
+	f    = fetch --prune
 	l    = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	ll   = log --graph --branches --remotes --date-order --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	m    = merge
-	p    = pull
+	p    = pull --prune
 	pick = cherry-pick
 	r    = remote
 	st   = status
 	sub  = submodule
+	sup  = submodule update --recursive
 [color]
 	ui = auto
 [diff]
@@ -21,8 +22,11 @@
 	renames = copies
 [merge]
 	conflictstyle = diff3
+[pull]
+	ff = only
 [push]
-	default = upstream
+	default = simple
+	followTags = true
 [rerere]
 	autoupdate = true
 	enabled = true
