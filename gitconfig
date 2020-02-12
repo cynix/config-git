@@ -4,6 +4,7 @@
 	co   = checkout
 	conf = config
 	d    = diff
+	ds   = diff --staged
 	f    = fetch --prune
 	l    = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	ll   = log --graph --branches --remotes --date-order --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
