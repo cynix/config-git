@@ -29,7 +29,7 @@
 [difftool]
 	prompt = false
 [difftool "difftastic"]
-	cmd = env DFT_DISPLAY_BOTH=t difft --missing-as-empty "$LOCAL" "$REMOTE"
+	cmd = difft --display=side-by-side-show-both --missing-as-empty --skip-unchanged "$LOCAL" "$REMOTE"
 [merge]
 	conflictstyle = diff3
 [pager]
