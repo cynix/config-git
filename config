@@ -36,6 +36,8 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[lfs]
+	locksverify = false
 [merge]
 	conflictstyle = diff3
 [pager]
