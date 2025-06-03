@@ -1,5 +1,5 @@
 #!/bin/sh
 if [ -e "$(git rev-parse --show-toplevel)/.pre-commit-config.yaml" ]; then
   command -v pre-commit >/dev/null 2>&1 || { printf >&2 "\n%s\n\n" "This repository is configured for pre-commit but 'pre-commit' was not found on your path."; exit 2; }
-  exec pre-commit hook-impl --hook-type=pre-commit
+  exec pre-commit hook-impl --hook-type=pre-commit --hook-dir="$(dirname "$0")"
 fi
