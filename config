@@ -21,7 +21,6 @@
 	ui = auto
 [core]
 	hookspath = ~/.config/git/hooks
-	pager = delta --24-bit-color=always --line-numbers --navigate --side-by-side
 [diff]
 	algorithm = patience
 	mnemonicprefix = true
@@ -41,7 +40,10 @@
 [merge]
 	conflictstyle = diff3
 [pager]
+	blame = delta --side-by-side
+	diff = diffnav --side-by-side
 	difftool = true
+	show = diffnav --side-by-side
 [pull]
 	ff = only
 [push]
