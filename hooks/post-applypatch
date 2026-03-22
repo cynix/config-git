@@ -1,0 +1,6 @@
+#!/bin/sh
+
+if test -f .git/branchless/config; then
+  command -v git-branchless >/dev/null 2>&1 || { printf >&2 "\n%s\n\n" "This repository is configured for git-branchless but 'git-branchless' was not found on your path."; exit 2; }
+  git branchless hook post-applypatch "$@"
+fi

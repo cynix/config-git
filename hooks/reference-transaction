@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if test -f .git/branchless/config; then
+  # Avoid canceling the reference transaction in the case that `branchless` fails
+  # for whatever reason.
+  command -v git-branchless >/dev/null 2>&1 && git branchless hook reference-transaction "$@" || (
+    echo 'branchless: Failed to process reference transaction!'
+    echo 'branchless: Some events (e.g. branch updates) may have been lost.'
+    echo 'branchless: This is a bug. Please report it.'
+  )
+fi
